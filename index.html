@@ -1,10 +1,272 @@
+
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>سایت من</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnHub | آموزش برنامه‌نویسی</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    transition: 0.3s;
+}
+
+header {
+    background: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+.logo {
+    color: #2563eb;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg,#2563eb,#7c3aed);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.hero .btn {
+    background: white;
+    color: #2563eb;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+.courses {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 270px;
+    box-shadow: 0 5px 20px #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #2563eb;
+    font-size: 24px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.icon {
+    font-size: 45px;
+}
+
+.about {
+    background: #e8f0ff;
+    padding: 50px 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+footer {
+    background: #202b40;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.dark {
+    background: #111827;
+    color: white;
+}
+
+.dark header,
+.dark .card {
+    background: #1f2937;
+    color: white;
+}
+
+.dark nav a {
+    color: white;
+}
+
+.dark .about {
+    background: #1f2937;
+}
+
+.dark .card p {
+    color: #ccc;
+}
+
+.dark header {
+    box-shadow: 0 2px 10px #000;
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>سلام سایت اول من </h1>
+
+<header>
+    <div class="logo">LearnHub 🚀</div>
+
+    <nav>
+        <a href="#home">خانه</a>
+        <a href="#courses">آموزش‌ها</a>
+        <a href="#about">درباره ما</a>
+    </nav>
+
+    <button class="btn" onclick="darkMode()">
+        🌙 تغییر تم
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <h1>به LearnHub خوش آمدید</h1>
+    <p>برنامه‌نویسی را ساده، جذاب و رایگان یاد بگیر!</p>
+    <a href="#courses" class="btn">شروع یادگیری</a>
+</section>
+
+<section class="courses" id="courses">
+    <h2>📚 دوره‌های آموزشی</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>HTML</h3>
+            <p>ساختار صفحات وب را از صفر یاد بگیر.</p>
+            <a href="#about" class="btn">مشاهده دوره</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎨</div>
+            <h3>CSS</h3>
+            <p>به سایت خود رنگ و زیبایی حرفه‌ای بده.</p>
+            <a href="#about" class="btn">مشاهده دوره</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+            <p>اولین برنامه‌های خودت را بساز.</p>
+            <a href="#about" class="btn">مشاهده دوره</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">⚡</div>
+            <h3>JavaScript</h3>
+            <p>به سایت خود امکانات تعاملی اضافه کن.</p>
+            <a href="#about" class="btn">مشاهده دوره</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>درباره LearnHub</h2>
+    <p>
+        هدف ما آموزش ساده و رایگان برنامه‌نویسی به همه است.
+        <br>
+        با LearnHub آینده خودت را بساز!
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 LearnHub | تمام حقوق محفوظ است.</p>
+    <p>ساخته شده با ❤️</p>
+</footer>
+
+<script>
+function darkMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>
